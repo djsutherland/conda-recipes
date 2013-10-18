@@ -1,0 +1,32 @@
+package:
+  name: vlfeat-ctypes
+  version: 0.1.4
+
+source:
+  fn: vlfeat-ctypes-0.1.4.tar.gz
+  url: https://pypi.python.org/packages/source/v/vlfeat-ctypes/vlfeat-ctypes-0.1.4.tar.gz
+  md5: 7d496ad53853cba50edf79cd525131b0
+  patches:
+    - save-lib.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - distribute
+    - numpy
+
+  run:
+    - python
+
+test:
+  imports:
+    - vlfeat
+
+about:
+  home: https://github.com/dougalsutherland/vlfeat-ctypes
+  license: BSD License

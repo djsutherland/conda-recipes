@@ -1,0 +1,23 @@
+diff --git setup.py setup.py
+index f8bddd8..94195d7 100644
+--- setup.py
++++ setup.py
+@@ -10,12 +10,18 @@ try:
+ except ImportError:
+     from distutils.core import setup
+ 
++from vlfeat import download
++download.ensure_so(download.DEFAULT_VERSION, './vlfeat/')
++
+ setup(
+     name='vlfeat-ctypes',
+     version='0.1.4',
+     author='Dougal J. Sutherland',
+     author_email='dougal@gmail.com',
+     packages=['vlfeat'],
++    package_data={
++        'vlfeat': ['libvl.dylib', 'libvl.so', 'vl.dll'],
++    },
+     url='https://github.com/dougalsutherland/vlfeat-ctypes',
+     description='A minimal ctypes-based port of some vlfeat functions.',
+     long_description=open('README.rst').read(),
