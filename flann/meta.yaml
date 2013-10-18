@@ -3,8 +3,6 @@ package:
     version: 1.8.5dev
 
 source:
-    # url: http://people.cs.ubc.ca/~mariusm/uploads/FLANN/flann-1.8.4-src.zip
-    # url: https://github.com/mariusmuja/flann/tarball/master
     git_url: git@github.com:mariusmuja/flann.git
 
 requirements:
@@ -15,6 +13,10 @@ requirements:
         - python
         - numpy
         - hdf5
+
+test:
+  imports:
+    - pyflann
 
 about:
     home: https://github.com/mariusmuja/flann
