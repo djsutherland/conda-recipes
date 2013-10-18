@@ -1,0 +1,43 @@
+package:
+  name: cyflann
+  version: 0.1.9
+
+source:
+  fn: cyflann-0.1.9.tar.gz
+  url: https://pypi.python.org/packages/source/c/cyflann/cyflann-0.1.9.tar.gz
+  md5: b4a6ba3dd86bdce586712235d498809d
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - distribute
+    - numpy
+    - flann
+
+  run:
+    - python
+    - numpy
+    - flann
+
+test:
+  imports:
+    - cyflann
+
+  commands:
+    - nosetests --exe cyflann
+
+  requires:
+    - nose
+
+about:
+  home: https://github.com/dougalsutherland/cyflann
+  license: BSD License
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
