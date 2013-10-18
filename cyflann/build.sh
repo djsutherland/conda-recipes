@@ -1,4 +1,3 @@
 #!/bin/bash
 
-export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig
-$PYTHON setup.py install
+FLANN_DIR=$PREFIX $PYTHON setup.py install
