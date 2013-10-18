@@ -1,0 +1,57 @@
+package:
+  name: py-sdm
+  version: 0.1.0dev
+
+source:
+  git_url: https://github.com/dougalsutherland/py-sdm.git
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - distribute
+    - numpy
+    - scipy
+    - cython
+    - flann
+    - cyflann
+    - scikit-learn
+    - scikit-image
+    - vlfeat-ctypes
+    - h5py
+    - nose
+    - progressbar
+    # TODO: can maybe tell setup.py to ignore dependencies?
+
+  run:
+    - python
+    - numpy
+    - scipy
+    - flann
+    - cyflann
+    - scikit-learn
+    - scikit-image
+    - vlfeat-ctypes
+    - h5py
+
+test:
+  imports:
+    - sdm
+
+  commands:
+      - nosetests --exe sdm.tests.test_divs
+
+  requires:
+    - nose
+
+about:
+  home: https://github.com/dougalsutherland/py-sdm
+  license: BSD License
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
