@@ -2,6 +2,9 @@ package:
     name: flann
     version: 1.8.5dev
 
+build:
+    number: 2
+
 source:
     git_url: git@github.com:mariusmuja/flann.git
 
