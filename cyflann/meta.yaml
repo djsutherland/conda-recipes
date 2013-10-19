@@ -1,11 +1,11 @@
 package:
   name: cyflann
-  version: 0.1.10
+  version: 0.1.11
 
 source:
-  fn: cyflann-0.1.10.tar.gz
-  url: https://pypi.python.org/packages/source/c/cyflann/cyflann-0.1.9.tar.gz
-  md5: b4a6ba3dd86bdce586712235d498809d
+  fn: cyflann-0.1.11.tar.gz
+  url: https://pypi.python.org/packages/source/c/cyflann/cyflann-0.1.11.tar.gz
+  md5: 826d63c5fe220689e2da3a7bbdfdc76b
 
 build:
   # If this is a new build for the same version, increment the build
