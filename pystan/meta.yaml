@@ -27,6 +27,12 @@ test:
   imports:
     - pystan
 
+  requires:
+    - nose
+
+  commands:
+    - nosetests --exe pystan.tests.test_basic
+
 about:
   home: https://github.com/stan-dev/pystan
   license: GNU General Public License
