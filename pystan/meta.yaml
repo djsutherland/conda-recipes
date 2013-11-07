@@ -29,6 +29,8 @@ test:
 
   requires:
     - nose
+    - matplotlib
+    - scipy
 
   commands:
     - nosetests --exe pystan.tests.test_basic
