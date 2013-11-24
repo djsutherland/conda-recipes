@@ -1,0 +1,35 @@
+package:
+  name: bottleneck
+  version: 0.7.0
+
+source:
+  fn: Bottleneck-0.7.0.tar.gz
+  url: https://pypi.python.org/packages/source/B/Bottleneck/Bottleneck-0.7.0.tar.gz
+  md5: d9e346919654896d67e304ee0202d628
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - numpy
+
+  run:
+    - python
+    - numpy
+
+test:
+  # run_test.py calls the bottleneck test suite
+  requires:
+    - nose
+
+about:
+  home: http://berkeleyanalytics.com/bottleneck
+  license: BSD License
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
