@@ -1,11 +1,11 @@
 package:
   name: bottleneck
-  version: 0.7.0
+  version: 0.8.0
 
 source:
-  fn: Bottleneck-0.7.0.tar.gz
-  url: https://pypi.python.org/packages/source/B/Bottleneck/Bottleneck-0.7.0.tar.gz
-  md5: d9e346919654896d67e304ee0202d628
+  fn: Bottleneck-0.8.0.tar.gz
+  url: https://pypi.python.org/packages/source/B/Bottleneck/Bottleneck-0.8.0.tar.gz
+  md5: 1a363fa35ce521eebb838e1bd6520e24
 
 # build:
   # If this is a new build for the same version, increment the build
@@ -15,11 +15,11 @@ source:
 requirements:
   build:
     - python
-    - numpy
+    - numpy >= 1.8
 
   run:
     - python
-    - numpy
+    - numpy >= 1.8
 
 test:
   # run_test.py calls the bottleneck test suite
