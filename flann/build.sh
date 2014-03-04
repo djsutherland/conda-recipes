@@ -21,7 +21,6 @@ if [[ `uname` == Darwin ]]; then
     # copy in the gcc-4.8 version of openmp, etc
     # TODO: solve this a better way.
     cd $PREFIX/lib
-    mkdir flann-support
 
     libgomp=$(otool -L libflann.dylib | grep -Eo '/.*libgomp.*?\s')
     libstd=$(otool -L libflann.dylib | grep -Eo '/.*libstdc\+\+.*?\s')
@@ -35,6 +34,7 @@ if [[ `uname` == Darwin ]]; then
     cp $libgomp $lgomp
     cp $libstd $lstd
     cp $libgcc $lgcc
+    chmod u+w $lgomp $lstd $lgcc
 
     for x in libflann.dylib libflann_cpp.dylib $lgomp $lstd $lgcc; do
         install_name_tool -id $PREFIX/lib/$x $x

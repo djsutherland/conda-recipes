@@ -3,7 +3,7 @@ package:
     version: 1.8.5dev
 
 build:
-    number: 2
+    number: 3
 
 source:
     git_url: git@github.com:mariusmuja/flann.git
