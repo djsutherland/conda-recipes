@@ -15,11 +15,11 @@ source:
 requirements:
   build:
     - python
-    - numpy >= 1.8
+    - numpy  # requires 1.8, but conda doesn't let you say that
 
   run:
     - python
-    - numpy >= 1.8
+    - numpy
 
 test:
   # run_test.py calls the bottleneck test suite
