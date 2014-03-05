@@ -1,0 +1,27 @@
+package:
+  name: ecos
+  version: 1.0.1
+
+source:
+  fn: ecos-1.0.1.tar.gz
+  url: https://pypi.python.org/packages/source/e/ecos/ecos-1.0.1.tar.gz
+  md5: 5ada9e047ff91ffc02d9d995afb30320
+
+requirements:
+  build:
+    - python
+    - numpy
+
+  run:
+    - python
+    - numpy
+    - scipy
+
+test:
+  imports:
+    - ecos
+
+about:
+  home: http://github.com/ifa-ethz/ecos
+  license: GPLv3
+  summary: 'This is the Python package for ECOS: Embedded Cone Solver. See Github page for more information.'
