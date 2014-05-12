@@ -10,6 +10,7 @@ source:
 
 requirements:
     build:
+        - cmake
         - python
         - hdf5
     run:
