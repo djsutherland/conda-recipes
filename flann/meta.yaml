@@ -3,10 +3,11 @@ package:
     version: 1.8.5dev
 
 build:
-    number: 3
+    number: 4
 
 source:
     git_url: git@github.com:mariusmuja/flann.git
+    git_tag: 894c1b975e299d15487a6a498862c6b1df39de28
 
 requirements:
     build:

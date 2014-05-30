@@ -5,9 +5,9 @@ cd build
 
 # TODO: add logic here...
 if [[ `uname` == Darwin ]]; then
-    export CC=gcc-4.8
-    export LD=gcc-4.8
-    export CXX=g++-4.8
+    export CC=gcc
+    export LD=gcc
+    export CXX=g++
 fi
 
 cmake .. -DCMAKE_INSTALL_PREFIX=$PREFIX \
@@ -18,7 +18,7 @@ cmake .. -DCMAKE_INSTALL_PREFIX=$PREFIX \
 make -j$(python -c 'import multiprocessing as m; print m.cpu_count()') install
 
 if [[ `uname` == Darwin ]]; then
-    # copy in the gcc-4.8 version of openmp, etc
+    # copy in the gcc version of openmp, etc
     # TODO: solve this a better way.
     cd $PREFIX/lib
 
