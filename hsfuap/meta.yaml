@@ -1,0 +1,47 @@
+package:
+  name: hsfuap
+  version: 0.1.0dev2014.07.21.0
+
+source:
+  fn: hsfuap-0.1.0dev2014.07.21.0.tar.gz
+  url: https://pypi.python.org/packages/source/h/hsfuap/hsfuap-0.1.0dev2014.07.21.0.tar.gz
+  md5: 24375e3c1a30233955fe4b893dc5d395
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 0
+
+  entry_points:
+    - hsfuap-nystroem = hsfuap.kernels.nystroem:main
+    - hsfuap-sdm-gather = hsfuap.sdm.gather_results:main
+    - hsfuap-sdm-kernelize = hsfuap.sdm.make_kernels:main
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - numpy
+    - cython
+    - humanize
+
+  run:
+    - python
+    - numpy
+    - scipy
+    - humanize
+    - pandas
+    - scikit-learn
+    - six
+
+test:
+  imports:
+    - hsfuap.kde._bandwidth
+
+about:
+  home: https://github.com/dougalsutherland/hsfuap
+  license: BSD License
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
