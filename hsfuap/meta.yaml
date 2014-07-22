@@ -2,10 +2,10 @@ package:
   name: hsfuap
   version: 0.1.0dev2014.07.21.1
 
-source:
-  fn: hsfuap-0.1.0dev2014.07.21.1.tar.gz
-  url: https://pypi.python.org/packages/source/h/hsfuap/hsfuap-0.1.0dev2014.07.21.1.tar.gz
-  md5: b3b9e13ea77efc7b5958b2e8ef9f3988
+# source:
+#   fn: hsfuap-0.1.0dev2014.07.21.1.tar.gz
+#   url: https://pypi.python.org/packages/source/h/hsfuap/hsfuap-0.1.0dev2014.07.21.1.tar.gz
+#   md5: b3b9e13ea77efc7b5958b2e8ef9f3988
 
 build:
   # If this is a new build for the same version, increment the build
