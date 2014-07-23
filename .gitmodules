@@ -1,0 +1,3 @@
+[submodule "hsfuap/src"]
+	path = hsfuap/src
+	url = https://github.com/dougalsutherland/hsfuap.git
