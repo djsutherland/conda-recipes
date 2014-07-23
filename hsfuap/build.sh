@@ -6,11 +6,7 @@ if [[ `uname` == Darwin ]]; then
     export CXX=g++-4.9
 fi
 
-HSFUAP_DIR=$RECIPE_DIR/src
+$PYTHON setup.py egg_info
+sed -n -e 's/^Version: \(.*\)$/\1/p' < hsfuap.egg-info/PKG-INFO > __conda_version__.txt
 
-date="$(git --git-dir=$HSFUAP_DIR/.git log -n1 --format=%ct)"
-$PYTHON -c "import datetime; print('0.1.0dev{:%Y.%m.%d.%H.%M}'.format(datetime.datetime.fromtimestamp($date)))" > __conda_version__.txt
-
-cp -a $HSFUAP_DIR/ ./src/
-cd src
 $PYTHON setup.py install
