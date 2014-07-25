@@ -1,11 +1,11 @@
 package:
   name: ecos
-  version: 1.0.1
+  version: 1.0.4
 
 source:
-  fn: ecos-1.0.1.tar.gz
-  url: https://pypi.python.org/packages/source/e/ecos/ecos-1.0.1.tar.gz
-  md5: 5ada9e047ff91ffc02d9d995afb30320
+  fn: ecos-1.0.4.tar.gz
+  url: https://pypi.python.org/packages/source/e/ecos/ecos-1.0.4.tar.gz
+  md5: fba0c5cf732866f8e0081bd12be4878f
 
 requirements:
   build:
