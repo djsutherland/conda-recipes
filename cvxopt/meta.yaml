@@ -1,11 +1,11 @@
 package:
   name: cvxopt
-  version: 1.1.6
+  version: 1.1.7
 
 source:
-  fn: cvxopt-1.1.6.tar.gz
-  url: https://pypi.python.org/packages/source/c/cvxopt/cvxopt-1.1.6.tar.gz
-  md5: 190ff21beba1c27eb6a9673cfc2ba1a3
+  fn: cvxopt-1.1.7.tar.gz
+  url: https://pypi.python.org/packages/source/c/cvxopt/cvxopt-1.1.7.tar.gz
+  md5: 5b80f5382bb638e606e486ee39bc93b4
 
   # number: 1
 
