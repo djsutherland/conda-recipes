@@ -14,12 +14,12 @@ requirements:
   build:
     - python
     - setuptools
-    - numpy >=1.4
+    - numpy
     - scipy >=0.8
 
   run:
     - python
-    - numpy >=1.4
+    - numpy
     - scipy >=0.8
 
 test:
