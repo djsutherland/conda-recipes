@@ -1,0 +1,43 @@
+package:
+  name: numdifftools
+  version: !!str 0.6.0
+
+source:
+  fn: Numdifftools-0.6.0.zip
+  url: https://pypi.python.org/packages/source/N/Numdifftools/Numdifftools-0.6.0.zip
+  md5: 4ae106059d0448c871c06ac74d3925c5
+
+# build:
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - numpy >=1.4
+    - scipy >=0.8
+
+  run:
+    - python
+    - numpy >=1.4
+    - scipy >=0.8
+
+test:
+  imports:
+    - numdifftools
+
+  # numdifftools is released with failing tests. fun!
+  # commands:
+  #   - nosetests --exe --with-doctest --doctest-options=+NORMALIZE_WHITESPACE -w numdifftools/ 
+
+  # requires:
+  #   - nose
+
+about:
+  home: http://code.google.com/p/numdifftools/
+  license: BSD License
+  summary: 'Solves automatic numerical differentiation problems in one or more variables.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
