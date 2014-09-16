@@ -8,7 +8,7 @@ build:
 source:
     # conda-build doesn't support subdirectories of git repos
     git_url: https://github.com/mariusmuja/flann.git
-    git_tag: 894c1b975e299d15487a6a498862c6b1df39de28
+    git_tag: 04b4a56533faf8c8228d011d05ba376038364b49
 
     patches:
         - find_lib.patch
