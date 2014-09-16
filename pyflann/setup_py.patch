@@ -1,0 +1,68 @@
+diff --git .gitignore .gitignore
+index 4a4d833..42aa041 100644
+--- .gitignore
++++ .gitignore
+@@ -4,7 +4,6 @@ tmp
+ *.pyc
+ src/matlab/*.dat
+ src/matlab/test.m
+-src/python/setup.py
+ test/*.h5
+ test/*.pkl
+ test/*.idx
+diff --git src/python/setup.py src/python/setup.py
+new file mode 100644
+index 0000000..dae4daf
+--- /dev/null
++++ src/python/setup.py
+@@ -0,0 +1,16 @@
++#!/usr/bin/env python2
++
++from distutils.core import setup
++from os.path import exists, abspath, dirname, join
++import os
++import sys
++
++setup(name='flann',
++      version=os.environ['PKG_VERSION'],
++      description='Fast Library for Approximate Nearest Neighbors',
++      author='Marius Muja',
++      author_email='mariusm@cs.ubc.ca',
++      license='BSD',
++      url='http://www.cs.ubc.ca/~mariusm/flann/',
++      packages=['pyflann'],
++)
+diff --git src/python/setup.py.tpl src/python/setup.py.tpl
+deleted file mode 100644
+index bb73744..0000000
+--- src/python/setup.py.tpl
++++ /dev/null
+@@ -1,28 +0,0 @@
+-#!/usr/bin/env python2
+-
+-from distutils.core import setup
+-from os.path import exists, abspath, dirname, join
+-import os
+-import sys
+-
+-
+-def find_path():
+-    lib_paths = [ os.path.abspath('@LIBRARY_OUTPUT_PATH@'), abspath(join(dirname(dirname(sys.argv[0])), '../../../lib')) ]
+-    possible_libs = ['libflann.so', 'flann.dll', 'libflann.dll', 'libflann.dylib']
+-
+-    for path in lib_paths:
+-        for lib in possible_libs:
+-            if exists(join(path,lib)):
+-                return path
+-
+-setup(name='flann',
+-      version='@FLANN_VERSION@',
+-      description='Fast Library for Approximate Nearest Neighbors',
+-      author='Marius Muja',
+-      author_email='mariusm@cs.ubc.ca',
+-      license='BSD',
+-      url='http://www.cs.ubc.ca/~mariusm/flann/',
+-      packages=['pyflann', 'pyflann.lib'],
+-      package_dir={'pyflann.lib': find_path() },
+-      package_data={'pyflann.lib': ['libflann.so', 'flann.dll', 'libflann.dll', 'libflann.dylib']}, 
+-)

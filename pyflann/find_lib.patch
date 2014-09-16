@@ -1,0 +1,26 @@
+diff --git src/python/pyflann/flann_ctypes.py src/python/pyflann/flann_ctypes.py
+--- src/python/pyflann/flann_ctypes.py
++++ src/python/pyflann/flann_ctypes.py
+@@ -143,11 +143,23 @@ FLANN_INDEX = c_void_p
+ def load_flann_library():
+ 
+     root_dir = os.path.abspath(os.path.dirname(__file__))
++
++    # for conda install, library is in different place:
++    if sys.platform == 'win32':
++        # this is <env>/Lib/site-packages/pyflann/flann_ctypes.py
++	# library is <env>/Library/bin/flann.dll
++        root_dir = os.path.abspath(os.path.join(
++            root_dir, '../../../Library'))
++    else:
++        # this is <env>/lib/pythonX.Y/site-packages/pyflann/flann_ctypes.py
++	# library is <env>/lib/libflann.(so|dylib)
++        root_dir = os.path.abspath(os.path.join(root_dir, '../../../..'))
+     
+     libnames = ['libflann.so']
+     libdir = 'lib'
+     if sys.platform == 'win32':
+         libnames = ['flann.dll', 'libflann.dll']
++	libdir = 'bin'
+     elif sys.platform == 'darwin':
+         libnames = ['libflann.dylib']

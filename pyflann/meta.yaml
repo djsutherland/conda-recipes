@@ -3,12 +3,16 @@ package:
     version: 1.8.5dev
 
 build:
-    number: 0
+    number: 1
 
 source:
     # conda-build doesn't support subdirectories of git repos
-    git_url: git@github.com:mariusmuja/flann.git
+    git_url: https://github.com/mariusmuja/flann.git
     git_tag: 894c1b975e299d15487a6a498862c6b1df39de28
+
+    patches:
+        - find_lib.patch
+        - setup_py.patch
 
 requirements:
     build:
