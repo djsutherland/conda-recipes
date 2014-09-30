@@ -3,12 +3,8 @@ package:
   version: 0.1.2
 
 source:
-  fn: skl-groups-0.1.2.tar.gz
-  url: https://pypi.python.org/packages/source/s/skl-groups/skl-groups-0.1.2.tar.gz
-  md5: 8d04f32a9222793947c046fd54d38649
-#  patches:
-   # List any patch files here
-   # - fix.patch
+  git_url: https://github.com/dougalsutherland/skl-groups.git
+  git_tag: 0.1.2
 
 build:
   #preserve_egg_dir: True
@@ -35,6 +31,8 @@ requirements:
     - cyflann
     - pip
     - cython
+    - versiontools
+    - gitpython
 
   run:
     - python

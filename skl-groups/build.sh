@@ -1,14 +1,13 @@
 #!/bin/bash
 
-$PYTHON setup.py install
-
 if [[ `uname` == Darwin ]]; then
-    export CC=gcc-4.8
-    export LD=gcc-4.8
-    export CXX=g++-4.8
+    export CC=gcc-4.9
+    export LD=gcc-4.9
+    export CXX=g++-4.9
 fi
 
-pip install skl-groups-accel==0.1.0
+$PYTHON setup.py install
+$PYTHON setup_accel.py install
 
 if [[ `uname` == Darwin ]]; then
     # use the flann-support version of gomp, etc
