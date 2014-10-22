@@ -2,9 +2,9 @@
 
 # TODO: add logic here
 if [[ `uname` == Darwin ]]; then
-    export CC=gcc
-    export LD=gcc
-    export CXX=g++
+    export CC=gcc-4.9
+    export LD=gcc-4.9
+    export CXX=g++-4.9
 fi
 
 # TODO: any way to just add to include dirs?
