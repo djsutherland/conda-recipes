@@ -1,0 +1,44 @@
+package:
+  name: typedbytes
+  version: !!str 0.3.8
+
+source:
+  fn: release-0.3.8.tar.gz
+  url: https://github.com/klbostee/typedbytes/archive/release-0.3.8.tar.gz
+  md5: dfbc6a18498949dca3c723f32a4fef6e
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  imports:
+    - typedbytes
+
+  files:
+    - testio.py
+    - testspeed.py
+
+  commands:
+    - nosetests
+
+  requires:
+    - nose
+
+about:
+  home: https://github.com/klbostee/typedbytes
+  license:  Apache Software License (ASF)
+  summary: 'A Python module for dealing with so called "typed bytes".'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,49 @@
+package:
+  name: ctypedbytes
+  version: !!str 0.1.8
+
+source:
+  fn: release-0.1.8.tar.gz
+  url: https://github.com/klbostee/ctypedbytes/archive/release-0.1.8.tar.gz
+  md5: b447b8c9c0c7c9535081ad4026d2147f
+
+build:
+  preserve_egg_dir: True
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - typedbytes
+
+  run:
+    - python
+    - setuptools
+    - typedbytes
+
+test:
+  imports:
+    - ctypedbytes
+
+  files:
+    - testio.py
+    - testspeed.py
+
+  commands:
+    - nosetests
+
+  requires:
+    - nose
+
+about:
+  home: https://github.com/klbostee/ctypedbytes
+  license:  Apache Software License (ASF)
+  summary: 'A fast Python module for dealing with so called "typed bytes".'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
