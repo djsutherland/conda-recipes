@@ -1,11 +1,11 @@
 package:
   name: smmap
-  version: !!str 0.8.2
+  version: !!str 0.8.3
 
 source:
-  fn: smmap-0.8.2.tar.gz
-  url: https://pypi.python.org/packages/source/s/smmap/smmap-0.8.2.tar.gz
-  md5: f5426b7626ddcf5e447253fae0396b0c
+  fn: smmap-0.8.3.tar.gz
+  url: https://pypi.python.org/packages/source/s/smmap/smmap-0.8.3.tar.gz
+  md5: f3e992556bb600f094135b749f957a8a
 #  patches:
    # List any patch files here
    # - fix.patch

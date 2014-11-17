@@ -1,17 +1,14 @@
 package:
   name: gitpython
-  version: !!str 0.3.2.RC1
+  version: !!str 0.3.2
 
 source:
-  fn: GitPython-0.3.2.RC1.tar.gz
-  url: https://pypi.python.org/packages/source/G/GitPython/GitPython-0.3.2.RC1.tar.gz
-  md5: 849082fe29adc653a3621465213cab96
-#  patches:
-   # List any patch files here
-   # - fix.patch
+  fn: GitPython-0.3.2.tar.gz
+  url: https://pypi.python.org/packages/source/G/GitPython/GitPython-0.3.2.tar.gz
+  md5: 3cc753d152f67ebb4f6e3c1e3ba1c3df
 
-# build:
-  #preserve_egg_dir: True
+build:
+  preserve_egg_dir: True
   #entry_points:
     # Put any entry points (scripts to be generated automatically) here. The
     # syntax is module:function.  For example
@@ -46,7 +43,6 @@ test:
     - git.repo
     - git.test
     - git.test.lib
-    - gitpython
 
   #commands:
     # You can put test commands to be run here.  Use this to test that the
@@ -56,12 +52,12 @@ test:
   # You can also put a file called run_test.py in the recipe that will be run
   # at test time.
 
-  # requires:
-    # Put any additional test requirements here.  For example
-    # - nose
+  requires:
+    - nose
+    - mock
 
 about:
-  home: http://gitorious.org/projects/git-python/
+  home: http://github.com/gitpython-developers/GitPython/
   license: BSD License
   summary: 'Python Git Library'
 
