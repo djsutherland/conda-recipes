@@ -12,7 +12,7 @@ $PYTHON setup_accel.py install
 if [[ `uname` == Darwin ]]; then
     # use the flann-support version of gomp, etc
     # TODO: solve this a better way.
-    cd $PREFIX/lib/python$PY_VER/site-packages/skl_groups_accel
+    cd $PREFIX/lib/python$PY_VER/site-packages/skl_groups_accel*/skl_groups_accel
 
     libgomp=$(otool -L knn_divs.so | grep -Eo '/.*libgomp.*?\s')
     libgcc=$(otool -L knn_divs.so | grep -Eo '/.*libgcc_s.*?\s' \
