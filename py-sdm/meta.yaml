@@ -31,7 +31,7 @@ requirements:
     - vlfeat-ctypes
     - h5py
     - nose
-    - progressbar
+    - progressbar ==0.2.3
     # TODO: can maybe tell setup.py to ignore dependencies?
 
   run:
@@ -44,7 +44,7 @@ requirements:
     - scikit-image
     - vlfeat-ctypes
     - h5py
-    - progressbar
+    - progressbar ==0.2.3
 
 test:
   imports:
