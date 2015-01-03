@@ -32,7 +32,7 @@ requirements:
     - pip
     - cython
     - versiontools
-    - gitpython
+    - gitpython [not py3k]
 
   run:
     - python
