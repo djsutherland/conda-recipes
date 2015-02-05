@@ -1,10 +1,10 @@
 package:
   name: skl-groups
-  version: 0.1.3
+  version: 0.1.4
 
 source:
   git_url: https://github.com/dougalsutherland/skl-groups.git
-  git_tag: 0.1.3
+  git_tag: 0.1.4
 
 build:
   #preserve_egg_dir: True
@@ -19,7 +19,7 @@ build:
 
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  number: 2
+  number: 0
 
 requirements:
   build:
