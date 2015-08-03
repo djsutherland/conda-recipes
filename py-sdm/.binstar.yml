@@ -1,6 +1,4 @@
-package: flann
-
-iotimeout: 7200
+package: py-sdm
 
 #===============================================================================
 # Build Matrix Options
@@ -14,9 +12,8 @@ iotimeout: 7200
 #  - linux-64
 #  - linux-32
 ## The engine are the inital conda packages you want to run with 
-# engine:
-#  - python=2
-#  - python=3
+engine:
+ - python=2
 ## The env param is an environment variable list 
 # env:
 #  - MY_ENV=A CC=gcc
@@ -25,6 +22,7 @@ iotimeout: 7200
 
 script:
   - conda config --add channels r
+  - conda config --add channels dougal
   - conda build .
 
 build_targets:
