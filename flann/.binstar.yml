@@ -1,0 +1,30 @@
+package: flann
+
+iotimeout: 7200
+
+#===============================================================================
+# Build Matrix Options
+# These options may be a single item, a list or empty
+# The resulting number of builds is [platform * engine * env] 
+#===============================================================================
+
+## The platforms to build on.
+## platform defaults to linux-64 
+# platform: 
+#  - linux-64
+#  - linux-32
+## The engine are the inital conda packages you want to run with 
+# engine:
+#  - python=2
+#  - python=3
+## The env param is an environment variable list 
+# env:
+#  - MY_ENV=A CC=gcc
+#  - MY_ENV=B
+
+
+script:
+  - conda build .
+
+build_targets:
+  - conda
