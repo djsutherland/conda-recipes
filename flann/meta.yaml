@@ -16,7 +16,7 @@ requirements:
         - gcc [osx]
     run:
         - hdf5
-        - gcc [osx]
+        - libgcc [osx]
 
 # TODO: build a basic test program
 

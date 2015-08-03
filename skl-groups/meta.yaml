@@ -41,7 +41,7 @@ requirements:
     - scipy
     - scikit-learn
     - cyflann
-    - gcc [osx]
+    - libgcc [osx]
 
 test:
   imports:

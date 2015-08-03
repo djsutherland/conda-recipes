@@ -47,7 +47,7 @@ requirements:
     - h5py
     - progressbar ==0.2.3
     - mock
-    - gcc [osx]
+    - libgcc [osx]
 
 test:
   imports:
