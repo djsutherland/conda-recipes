@@ -4,12 +4,12 @@ package:
 
 source:
   git_url: https://github.com/dougalsutherland/py-sdm.git
-  git_tag: conda-0.1.0dev_14
+  git_tag: conda-0.1.0dev_15
 
 build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  number: 14
+  number: 15
 
   entry_points:
     - extract_image_features = sdm.extract_image_features:main
@@ -32,7 +32,8 @@ requirements:
     - h5py
     - nose
     - progressbar ==0.2.3
-    # TODO: can maybe tell setup.py to ignore dependencies?
+    - mock
+    - gcc [osx]
 
   run:
     - python
@@ -45,6 +46,8 @@ requirements:
     - vlfeat-ctypes
     - h5py
     - progressbar ==0.2.3
+    - mock
+    - gcc [osx]
 
 test:
   imports:
