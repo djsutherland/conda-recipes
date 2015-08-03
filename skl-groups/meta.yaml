@@ -1,10 +1,10 @@
 package:
   name: skl-groups
-  version: 0.1.4
+  version: 0.1.5
 
 source:
   git_url: https://github.com/dougalsutherland/skl-groups.git
-  git_tag: 0.1.4
+  git_tag: 0.1.5
 
 build:
   #preserve_egg_dir: True
@@ -33,6 +33,7 @@ requirements:
     - cython
     - versiontools
     - gitpython [not py3k]
+    - gcc [osx]
 
   run:
     - python
@@ -40,26 +41,24 @@ requirements:
     - scipy
     - scikit-learn
     - cyflann
+    - gcc [osx]
 
 test:
-  # Python imports
   imports:
     - skl_groups
     - skl_groups.divergences
     - skl_groups.summaries
     - skl_groups.tests
 
+  requires:
+    - nose
+    - testfixtures
+
   commands:
     - nosetests --exe skl_groups
-
-
   # You can also put a file called run_test.py in the recipe that will be run
   # at test time.
 
-  requires:
-    # Put any additional test requirements here.  For example
-    - nose
-    - testfixtures
 
 about:
   home: https://github.com/dougalsutherland/skl-groups
