@@ -3,18 +3,20 @@ package:
     version: 1.8.5dev
 
 build:
-    number: 7
+    number: 8
 
 source:
     git_url: git@github.com:mariusmuja/flann.git
-    git_tag: 04b4a56533faf8c8228d011d05ba376038364b49
+    git_tag: 9a01507d2231b29eb688246a6e442054defa7460
 
 requirements:
     build:
         - cmake
         - hdf5
+        - gcc [osx]
     run:
         - hdf5
+        - gcc [osx]
 
 # TODO: build a basic test program
 
