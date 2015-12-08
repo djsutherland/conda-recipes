@@ -22,9 +22,7 @@ engine:
 
 
 script:
-  - conda config --add channels r
-  - conda config --add channels dougal
-  - conda build .
+  - conda build -c dougal -c r .
 
 build_targets:
   - conda
