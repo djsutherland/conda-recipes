@@ -11,11 +11,8 @@ cat << EOF > setup.py
 #!/usr/bin/env python2
 
 from distutils.core import setup
-from os.path import exists, abspath, dirname, join
-import os
-import sys
 
-# removed find_path(), don't need it
+# removed find_path() stuff, don't need it
 
 setup(name='flann',
       version='$PKG_VERSION',
@@ -24,9 +21,7 @@ setup(name='flann',
       author_email='mariusm@cs.ubc.ca',
       license='BSD',
       url='http://www.cs.ubc.ca/~mariusm/flann/',
-      packages=['pyflann'],  # , 'pyflann.lib'],
-      # package_dir={'pyflann.lib': find_path() },
-      # package_data={'pyflann.lib': ['libflann.so', 'flann.dll', 'libflann.dll', 'libflann.dylib']}, 
+      packages=['pyflann'],
 )
 EOF
 
