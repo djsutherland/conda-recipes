@@ -1,10 +1,10 @@
 package:
   name: skl-groups
-  version: 0.1.6
+  version: 0.1.7
 
 source:
   git_url: https://github.com/dougalsutherland/skl-groups.git
-  git_tag: 0.1.6
+  git_tag: 0.1.7
 
 build:
   #preserve_egg_dir: True
@@ -27,7 +27,7 @@ requirements:
     - numpy x.x
     - scipy
     - setuptools
-    - scikit-learn
+    - scikit-learn >=0.17
     - cyflann
     - pip
     - cython
