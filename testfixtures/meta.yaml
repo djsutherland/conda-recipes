@@ -1,11 +1,11 @@
 package:
   name: testfixtures
-  version: 3.0.2
+  version: 4.10.0
 
 source:
-  fn: testfixtures-3.0.2.tar.gz
-  url: https://pypi.python.org/packages/source/t/testfixtures/testfixtures-3.0.2.tar.gz
-  md5: b3e8281227b147804bf7c581c260b762
+  fn: testfixtures-4.10.0.tar.gz
+  url: https://pypi.python.org/packages/75/14/cc514a618bada8abd82860985ce9c87e77fbffed20dbde0b5d889925c450/testfixtures-4.10.0.tar.gz
+  md5: 64af471a82ab788c1f18e6c2b8bf0479
 
 # build:
   # If this is a new build for the same version, increment the build
