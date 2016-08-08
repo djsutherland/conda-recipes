@@ -1,27 +1,27 @@
 package:
   name: cyflann
-  version: 0.1.23
+  version: 0.1.24
 
 source:
-  fn: cyflann-0.1.23.tar.gz
-  url: https://pypi.python.org/packages/source/c/cyflann/cyflann-0.1.23.tar.gz
-  md5: f7c5bc3694ac2cda3f708f9b3da4bb85
+  fn: cyflann-0.1.24.tar.gz
+  url: https://pypi.python.org/packages/a6/0c/6007f6594d28f1d5c963539c0307608fb5443bfff25fcfa44edbf1d8b756/cyflann-0.1.24.tar.gz
+  md5: a2f3aff7ae9f9bb24a15287ff8583ce0
 
 build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  number: 2
+  number: 0
 
 requirements:
   build:
     - python
     - setuptools
-    - numpy
+    - numpy x.x
     - flann
 
   run:
     - python
-    - numpy
+    - numpy x.x
     - flann
 
 test:
