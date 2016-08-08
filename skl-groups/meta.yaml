@@ -24,7 +24,7 @@ build:
 requirements:
   build:
     - python
-    - numpy
+    - numpy x.x
     - scipy
     - setuptools
     - scikit-learn
@@ -37,7 +37,7 @@ requirements:
 
   run:
     - python
-    - numpy
+    - numpy x.x
     - scipy
     - scikit-learn
     - cyflann
