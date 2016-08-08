@@ -7,7 +7,7 @@ build:
 
 source:
     # conda-build doesn't support subdirectories of git repos
-    git_url: https://github.com/mariusmuja/flann/
+    git_url: https://github.com/mariusmuja/flann.git
     git_tag: 1.9.1
 
 requirements:
