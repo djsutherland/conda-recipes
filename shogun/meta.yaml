@@ -1,0 +1,88 @@
+{% set name = "shogun" %}
+{% set version = "6.0.0" %}
+{% set sha256 = "413da26db7fb57aa36c2981bf92d23817c0a29f22051b331dbe5b86e46119748" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://github.com/shogun-toolbox/shogun/archive/shogun_{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - vc 9  # [win and py27]
+    - vc 10  # [win and py34]
+    - vc 14  # [win and py>=35]
+    - setuptools
+    - toolchain
+    - cmake
+    - eigen
+    - swig
+    - numpy x.x
+    - hdf5
+    - glpk
+    - protobuf
+    - libxml2
+    - ctags
+    - snappy
+    - json-c
+    - xz
+    - zlib
+    - curl
+    - doxygen
+    - nlopt
+    - openblas
+  run:
+    - python
+    - vc 9  # [win and py27]
+    - vc 10  # [win and py34]
+    - vc 14  # [win and py>=35]
+    - numpy x.x
+    - hdf5
+    - glpk
+    - protobuf
+    - libxml2
+    - ctags
+    - snappy
+    - json-c
+    - xz
+    - zlib
+    - curl
+    - nlopt
+    - openblas
+  features:
+    - vc9   # [win and py27]
+    - vc10  # [win and py34]
+    - vc14  # [win and py>=35]
+
+test:
+  requirements:
+    - shogun
+    - numpy x.x
+  imports:
+    - modshogun
+
+about:
+  home: http://shogun.ml
+  license: GPL-3.0
+  license_family: GPL
+  license_file: COPYING
+  summary: 'Unified and efficient Machine Learning'
+
+  # The remaining entries in this section are optional, but recommended
+  description: |
+    The Shogun Machine learning toolbox offers a wide range of efficient and
+    unified Machine Learning methods.
+  doc_url: http://shogun.ml/examples/latest/index.html
+  dev_url: https://github.com/shogun-toolbox/shogun/wiki
+
+extra:
+  recipe-maintainers:
+    - dougalsutherland
