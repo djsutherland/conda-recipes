@@ -4,7 +4,7 @@ mkdir build
 cd build
 
 if [[ $(uname) == "Darwin" ]]; then
-    pylib=$(otool -L $PYTHON | grep 'libpython.*\.so' | tr '\t' ' ' | cut -d' ' -f2 | sed "s|@rpath|$PREFIX|")
+    pylib=$(otool -L $PYTHON | grep 'libpython.*\.dylib' | tr '\t' ' ' | cut -d' ' -f2 | sed "s|@rpath|$PREFIX/lib|")
 else
     pylib=$(ldd $PYTHON | grep $PREFIX | grep 'libpython.*\.so' | cut -d' ' -f3)
 fi
