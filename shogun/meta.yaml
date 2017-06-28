@@ -1,6 +1,7 @@
 {% set name = "shogun" %}
 {% set version = "6.0.0" %}
 {% set sha256 = "413da26db7fb57aa36c2981bf92d23817c0a29f22051b331dbe5b86e46119748" %}
+{% set variant = "openblas" %}
 
 package:
   name: {{ name|lower }}
@@ -13,6 +14,8 @@ source:
 
 build:
   number: 0
+  feature:
+    - blas_{{ variant }}
 
 requirements:
   build:
@@ -23,6 +26,7 @@ requirements:
     - setuptools
     - toolchain
     - cmake
+    - arpack
     - eigen
     - swig
     - numpy x.x
@@ -45,6 +49,7 @@ requirements:
     - vc 10  # [win and py34]
     - vc 14  # [win and py>=35]
     - numpy x.x
+    - arpack
     - hdf5
     - glpk
     - protobuf
