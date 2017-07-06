@@ -3,8 +3,11 @@ set -e
 mkdir build
 cd build
 
+# figure out include / library paths
+# https://github.com/conda/conda-build/issues/2130 will be proper solution
+pyinc=$($PYTHON -c "from distutils import sysconfig; print(sysconfig.get_python_inc())")
 if [[ $(uname) == "Darwin" ]]; then
-    pylib=$(otool -L $PYTHON | grep 'libpython.*\.so' | tr '\t' ' ' | cut -d' ' -f2 | sed "s|@rpath|$PREFIX|")
+    pylib=$(otool -L $PYTHON | grep 'libpython.*\.dylib' | tr '\t' ' ' | cut -d' ' -f2 | sed "s|@rpath|$PREFIX/lib|")
 else
     pylib=$(ldd $PYTHON | grep $PREFIX | grep 'libpython.*\.so' | cut -d' ' -f3)
 fi
@@ -19,10 +22,9 @@ cmake .. \
     -DBUNDLE_NLOPT=OFF \
     -DENABLE_TESTING=OFF \
     -DENABLE_COVERAGE=OFF \
-    -DENABLE_APRACK=OFF \
     -DENABLE_LZO=OFF \
     -DSWIG_EXECUTABLE=$PREFIX/bin/swig \
-    -DPYTHON_INCLUDE_DIR=$($PYTHON -c "from distutils import sysconfig; print(sysconfig.get_python_inc())") \
+    -DPYTHON_INCLUDE_DIR=$pyinc \
     -DPYTHON_LIBRARY=$pylib \
     -DPYTHON_EXECUTABLE=$PYTHON \
     -DPythonModular=ON
